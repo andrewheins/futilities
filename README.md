@@ -4,6 +4,6 @@ Lots of plugins do *stuff* and you're left trying to figure out exactly what's g
 
 Futilities were also designed to be easy to build yourself. You can add futilities to the system and turn them on and off easily.
 
-** TODO
+## TODO
 
 * Add a user futilities folder that doesn't conflict with the base set
