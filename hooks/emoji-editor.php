@@ -1,6 +1,6 @@
 <?php 
   
-  register_futility_hook(
+  Futilities::register_futility_hook(
     'remove_emoji_editor',
     'Remove Emoji Support from Content Editor',
     'init',

@@ -1,6 +1,6 @@
 <?php 
   
-  register_futility_hook(
+  Futilities::register_futility_hook(
     'clean_head',
     'Removes garbage from &lt;head&gt;',
     'wp_loaded',

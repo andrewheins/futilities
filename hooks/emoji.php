@@ -1,6 +1,6 @@
 <?php 
   
-  register_futility_hook(
+  Futilities::register_futility_hook(
     'remove_emoji',
     'Remove Emoji Support',
     'init',

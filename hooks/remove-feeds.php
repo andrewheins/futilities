@@ -1,6 +1,6 @@
 <?php 
   
-  register_futility_hook(
+  Futilities::register_futility_hook(
     'remove_feeds',
     'Removes Feeds from &lt;head&gt;',
     'wp_loaded',
