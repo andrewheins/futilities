@@ -19,4 +19,3 @@ if ( ! defined( 'WPINC' ) ) {
 require_once( plugin_dir_path( __FILE__ ) . 'futilities-class.php' );
 
 Futilities::get_instance();
-
