@@ -6,4 +6,6 @@ Futilities were also designed to be easy to build yourself. You can add futiliti
 
 ## TODO
 
-* Add a user futilities folder that doesn't conflict with the base set
+* Add a user futilities folder that doesn't conflict with the base set.
+* Actually sanitize input somewhat.
+* Implement Utilities

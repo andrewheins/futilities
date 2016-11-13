@@ -116,14 +116,6 @@ class FutilitiesSettings
         print "Select which hooks you'd like to include:";
     }
 
-    /** 
-     * Get the settings option array and print one of its values
-     */
-    public function client_id_callback()
-    {
-        
-    }
-
 }
 
 if( is_admin() )
