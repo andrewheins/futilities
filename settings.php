@@ -3,7 +3,7 @@
 class FutilitiesSettings
 {
 
-  
+
     /**
      * Holds the values to be used in the fields callbacks
      */

@@ -5,10 +5,10 @@
     'Remove Emoji Support from Content Editor',
     'init',
     function() {
-    	add_filter( 'tiny_mce_plugins', function( $plugins ) {
-      	if ( ! is_array( $plugins ) ) {
-      		return array();
-      	}
+      add_filter( 'tiny_mce_plugins', function( $plugins ) {
+        if ( ! is_array( $plugins ) ) {
+          return array();
+        }
         return array_diff( $plugins, array( 'wpemoji' ) );
       } );
     },
