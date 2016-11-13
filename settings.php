@@ -1,6 +1,4 @@
 <?php
-  
-global $futilities;  
 
 class FutilitiesSettings
 {
@@ -64,7 +62,7 @@ class FutilitiesSettings
     public function page_init()
     {        
       
-      global $futilities;
+      $futilities = Futilities::get_instance();
       
       register_setting(
           'futilities_settings', // Option group
@@ -79,7 +77,11 @@ class FutilitiesSettings
           'futilities-settings' // Page
       );  
 
-      foreach( $futilities['hooks']['action'] as $hook ) {
+      
+      $futilities_list = $futilities->get_futilities();
+    
+
+      foreach( $futilities_list['hooks']['action'] as $hook ) {
         add_settings_field(
           $hook->ID, // ID
           $hook->title, // Title 

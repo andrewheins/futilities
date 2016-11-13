@@ -11,6 +11,8 @@ class Futilities {
 
   private function __construct() {
     
+    // We're building out the different things we want to load.
+    // If some of these are disabled, technically, they still sit resident in memory until it's done, isn't idea.
     $this->futilities = array(
       'hooks' => array(
         'action' => array(),
@@ -46,6 +48,13 @@ class Futilities {
       
     }
     
+    // Initialize the settings page
+    require_once( 'settings.php' );
+    
+  }
+  
+  public function get_futilities() {
+    return $this->futilities;
   }
   
   // Our registration functions. These is what you use to register a futility.

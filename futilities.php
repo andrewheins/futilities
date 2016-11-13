@@ -20,5 +20,3 @@ require_once( plugin_dir_path( __FILE__ ) . 'futilities-class.php' );
 
 Futilities::get_instance();
 
-// Initialize the settings page
-require_once( 'settings.php' );
