@@ -65,16 +65,16 @@ class FutilitiesSettings
       $futilities = Futilities::get_instance();
       
       register_setting(
-          'futilities_settings', // Option group
-          'futilities_settings', // Option name
-          array( $this, 'sanitize' ) // Sanitize
+        'futilities_settings', // Option group
+        'futilities_settings', // Option name
+        array( $this, 'sanitize' ) // Sanitize
       );
 
       add_settings_section(
-          'setting_section_id', // ID
-          'Hooks', // Title
-          array( $this, 'print_section_info' ), // Callback
-          'futilities-settings' // Page
+        'futilities-hooks', // ID
+        'Hooks', // Title
+        array( $this, 'print_hooks_info' ), // Callback
+        'futilities-settings' // Page
       );  
 
       
@@ -87,7 +87,7 @@ class FutilitiesSettings
           $hook->title, // Title 
           $hook->field, // Callback
           'futilities-settings', // Page
-          'setting_section_id', // Section
+          'futilities-hooks', // Section
           array(
             'id' => $hook->ID,
             'type' => $hook->type,
@@ -95,6 +95,15 @@ class FutilitiesSettings
           )         
         );
       }
+      
+      add_settings_section(
+        'futilities-classes', // ID
+        'Classes', // Title
+        array( $this, 'print_classes_info' ), // Callback
+        'futilities-settings' // Page
+      );  
+      
+      
 
     }
 
@@ -109,11 +118,28 @@ class FutilitiesSettings
     }
 
     /** 
-     * Print the Section text
+     * Print the Hooks Section text
      */
-    public function print_section_info()
+    public function print_hooks_info()
     {
         print "Select which hooks you'd like to include:";
+    }
+    
+    /** 
+     * Print all loaded Classes
+     */
+    public function print_classes_info()
+    {
+      print "Loaded Futilities Classes:"; ?>
+      <ul>
+        <?php
+        foreach(glob(__DIR__ .'/utilities/*.php') as $file) {
+            if( strrpos( $file, 'FutilityClass.php' ) > -1) { continue; }
+            echo( '<li>' . $file . '</li>' );
+        }
+        ?>
+      </ul>
+      <?php
     }
 
 }
