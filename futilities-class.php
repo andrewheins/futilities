@@ -5,7 +5,7 @@ class Futilities {
   protected $version = '1.0.0';
   protected $plugin_slug = 'futilities';
   protected static $instance = null;
-  protected $plugin_screen_hook_suffix = utilities;
+  protected $plugin_screen_hook_suffix = 'futilities';
   public $futilities;
   
 
